@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  .logout {
+    margin-left: 20px;
+  }
+  .cart-wrap {
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+.mat-elevation-z8 {
+  .add {
+    min-width: 100px;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.first-header-row th {
+  border-bottom: none;
+}
+
+.second-header-row {
+  font-style: italic;
+}
+
+.first-footer-row {
+  font-weight: bold;
+}
+
+.second-footer-row td {
+  color: #900000;
+}

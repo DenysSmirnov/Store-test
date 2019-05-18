@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+.login-container > * {
+  width: 100%;
+}
+.login-card {
+  width: 280px;
+  margin: auto;
+  margin-top: 10%;
+}
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .login {
+    width: 100%;
+    cursor: pointer;
+  }
+  .other {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+.mat-form-field {
+  display: block;
+  input {
+    box-shadow: none;
+  }
+}
