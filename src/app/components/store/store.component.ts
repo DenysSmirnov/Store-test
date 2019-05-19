@@ -4,7 +4,6 @@ import { StoreService } from './../services/store.service';
 import { MatTableDataSource } from '@angular/material';
 
 export interface Product {
-  id: number;
   name: string;
   price: number;
 }

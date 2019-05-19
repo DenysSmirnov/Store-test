@@ -5,8 +5,8 @@
     <button mat-raised-button class="logout" color="primary" (click)="logout()">Logout</button>
   </div>
   <div class="cart-wrap">
-    <i class="material-icons" [routerLink]="['/cart']">shopping_cart</i>
-    <div class="items-count"></div>
+    <i class="material-icons" title="Cart" [routerLink]="['/cart']">shopping_cart</i>
+    <span class="items-count" *ngIf="selectedProducts.length">{{ selectedProducts.length }}</span>
   </div>
 </div>
 

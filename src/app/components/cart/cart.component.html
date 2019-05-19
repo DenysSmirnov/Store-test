@@ -1,3 +1,41 @@
-<p>
-  cart works!
-</p>
+
+<div class="header">
+  <div>
+    <span>{{ email }}</span>
+    <button mat-raised-button class="logout" color="primary" (click)="logout()">Logout</button>
+  </div>
+  <div class="cart-wrap">
+    <i class="material-icons" title="To store" [routerLink]="['/store']">store</i>
+    <div class="items-count"></div>
+  </div>
+</div>
+
+<table mat-table *ngIf="selectedProducts.length; else empty" [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+    <td mat-footer-cell *matFooterCellDef> Total in cart</td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let product"> {{product.price | currency}} </td>
+    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let product"> 
+      <i class="material-icons" (click)="delete(product.name)">delete</i>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="first-header-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-footer-row *matFooterRowDef="displayedColumns.slice(0,displayedColumns.length-1)" class="first-footer-row"></tr>
+</table>
+
+<ng-template #empty>
+  <div class="no-items">Nothing here yet</div>
+</ng-template>
+  

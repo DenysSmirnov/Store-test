@@ -6,36 +6,15 @@
   <form [formGroup]="regForm" novalidate (ngSubmit)="onSubmit()">
     <mat-card-content>
       <div class="reg-container">
-
         <div class="form-group">
         <mat-form-field>
           <input matInput placeholder="Your email" class="form-control" name="email" formControlName="email" autocomplete="off">
           <mat-error *ngIf="regForm.controls['email'].invalid">{{ getEmailErrorMessage() }}</mat-error>
         </mat-form-field>
         </div>
-
-        <!-- <div class="form-group">
-        <mat-form-field>
-          <input matInput placeholder="Your password" [type]="hide ? 'password' : 'text'"
-            class="form-control" name="pass" formControlName="password">
-          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          <mat-error *ngIf="regForm.controls['password'].invalid">{{ getPassErrorMessage() }}</mat-error>
-        </mat-form-field>
-        </div>
-
-        <div class="form-group">
-        <mat-form-field>
-          <input matInput placeholder="Confirm password" [type]="hide ? 'password' : 'text'"
-            class="form-control" name="confirmPass" formControlName="confirmPass">
-          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          <mat-error *ngIf="regForm.controls['confirmPass'].invalid">{{ getConfirmPassErrorMessage() }}</mat-error>
-        </mat-form-field>
-        </div> -->
       </div>
-
       <span *ngIf="success">{{ success }}</span>
       <mat-error *ngIf="error">{{ error }}</mat-error>
-
     </mat-card-content>
     <div class="button-row">
       <div class="form-group">

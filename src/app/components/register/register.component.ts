@@ -63,7 +63,6 @@ export class RegisterComponent implements OnInit {
           this.regForm.reset();
         }, 2000);
       }, err => {
-        // this.regForm.reset();
         this.error = err.message;
         this.success = '';
       });

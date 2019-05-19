@@ -69,7 +69,6 @@ export class LoginComponent implements OnInit {
       })
       .catch(err => {
         this.error = err.message;
-        // this.loginForm.reset();
       });
   }
 

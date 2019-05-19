@@ -19,9 +19,7 @@ import { StoreComponent } from './components/store/store.component';
 import { StoreService } from './components/services/store.service';
 
 const MATERIAL_MODULES = [
-  // MatFormFieldModule,
   MatInputModule,
-  // MatSelectModule,
   MatButtonModule,
   MatIconModule,
   MatCardModule,
